@@ -1,0 +1,53 @@
+.main{
+    z-index: 1;
+    height: 600px;
+}
+.hero-img{
+    position: absolute;
+    width: 100%;    
+    filter: blur(2px);
+}
+.container{
+
+    position: relative;
+    z-index: 2;
+}
+.flex-box{
+    display: flex;
+    top: 100%;
+}
+.container1{
+    z-index: 10;
+    width : 300px;
+    padding : 20px;
+    border :5px solid rgb(103, 153, 207);
+    border-radius : 10px;
+    text-align : center;
+    margin: 50px;
+    justify-content: space-between;
+    height: 70vh;
+    background-color: gray;
+}
+
+ .container1 h1 {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  .head-paragraph1 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .head-paragraph2 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .head-paragraph3 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
