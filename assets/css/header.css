@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800|Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat',sans-serif;
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px); /* Mulai dari kiri */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Bergerak ke posisi normal */
+    }
+}
+.nav-bar {
+    background-color: #17cae5;
+    height: 60px;
+    position: relative; /* Agar elemen di dalamnya bisa diposisikan relatif */
+    text-align: center; /* Memusatkan menu */
+    z-index: 10;
+}
+
+.logo {
+    position: absolute; /* Logo tetap di kiri */
+    left: 20px; /* Memberikan jarak dari kiri */
+    top: 50%;
+    transform: translateY(-50%); /* Menjaga logo tetap vertikal di tengah */
+}
+
+.logo img {
+    height: 60px; /* Atur tinggi logo sesuai kebutuhan */
+}
+
+/* Menu Styling */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block; /* Membuat menu menjadi inline */
+    position: relative;
+   
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    padding: 18px 20px;
+    color: white;
+}
+
+.menu li a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+
+.menu li:hover {
+    background-color: #14a2b8;
+}
+
+/* Dropdown Styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 95%; /* Dropdown muncul tepat di bawah menu */
+    left: 50%; /* Posisikan titik tengah dropdown di tengah item menu */
+    transform: translateX(-50%); /* Geser dropdown ke kiri setengah dari lebarnya */
+    width: 250px;
+    background-color: #14a2b8;
+    text-align: left;
+    padding: 8px;
+    z-index: 10;
+}
+
+.menu li:hover .dropdown {
+    display: block; /* Tampilkan dropdown saat di-hover */
+}
+
+.dropdown li {
+    cursor: pointer;
+    border-radius: 8px;
+    width: 235px;
+    padding: 10px;
+}
+.dropdown li:hover .hidden-logo{
+    display: block;
+}
+.hidden-logo{
+    animation: slideIn 0.5s ease forwards;
+    height: 25px;
+    display: none;
+}
+
+
+.dropdown li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.dropdown li:hover {
+    background-color: #17cae5;
+}
+.login-box{
+    width: 160px;
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    top: 6px;
+    border-radius: 20px;
+    height: 25px;
+    background-color: #75d8e7;
+    position: absolute;
+    left: 80%;
+}
+.login-logo{
+    display: none;
+    position: absolute;
+    left: 12px;
+    border-radius: 20px;
+    background-color: rgb(69, 180, 203);
+    align-items: center;
+    opacity: 0;
+    height: 30px;
+}
+.login-box h1{
+    color: white;
+}
+.login-box:hover .login-logo{
+    display: block;
+    opacity: 1;
+    animation: slideIn 0.5s ease forwards;
+}
+.login-box:hover{
+    background-color: rgb(3, 129, 157);
+}
+
