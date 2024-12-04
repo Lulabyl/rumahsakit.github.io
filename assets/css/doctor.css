@@ -1,0 +1,48 @@
+
+.cards{
+    display: flex;
+    background: linear-gradient(180deg, #a0e9ff, #0090bc);
+    justify-content: space-between;
+    overflow: hidden;
+    flex-wrap: nowrap ;
+    overflow: auto;
+    height: 650px;
+}
+.img-item{
+    margin: 12px;
+    padding-top: 20px;
+    width: 80%;
+}
+
+.sickness{
+    width: 80px;
+}
+.card {
+    background-color: #CDF5FD;
+    margin: 12px;
+    width: 80px;
+    height: 80px;
+    border-radius: 80px;
+    transition: width 0.5s ease; 
+}
+.cards .card:hover{
+    border-radius: 12px;
+    width: 400px;
+    height: 500px;
+}
+.cards .card:hover .content{
+    display: block;
+}
+.cards .card:hover .sickness{
+    display: none;
+}
+.content{
+    display: none;
+    text-align: center;
+}
+
+.content p{
+    margin: 12px;
+    padding: 20px;
+    font-size: 17px;
+}

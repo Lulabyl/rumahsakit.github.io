@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat',sans-serif;
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.nav-bar {
+    background-color: #00A9FF;
+    height: 60px;
+    position: relative; 
+    text-align: center;
+    z-index: 10;
+}
+
+.logo {
+    position: absolute;
+    left: 20px; 
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #CDF5FD;
+    width: 95px;
+    border-radius: 20px;
+    
+}
+.logo h1{
+    color: #00A9FF;
+}
+.logo img {
+    height: 50px;
+    margin-right: 60px;
+  
+}
+
+.logo-name{
+    position: absolute;
+    top: 9px;
+    font-size: 22px;
+    color: white;
+    left: 50px;
+    line-height: 0.8;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+   
+}
+
+.menu li {
+    position: relative;
+    display: inline-block;
+    padding: 18px 20px;
+    color: white;
+    font-weight: 700;
+}
+
+.menu li a {
+
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+}
+
+.menu li:hover {
+    background-color: #0090d8;
+}
+
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 95%; 
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 250px;
+    background-color: #0090d8;
+    text-align: left;
+    padding: 8px;
+    z-index: 10;
+}
+
+.menu li:hover .dropdown {
+    display: block; 
+}
+
+.dropdown li {
+    cursor: pointer;
+    border-radius: 8px;
+    width: 235px;
+    padding: 10px;
+}
+.dropdown li:hover .hidden-logo{
+    display: block;
+}
+.hidden-logo{
+    animation: slideIn 0.5s ease forwards;
+    height: 25px;
+    display: none;
+}
+
+
+.dropdown li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.dropdown li:hover {
+    background-color: #00A9FF;
+}
+.login-box{
+    width: 160px;
+    padding: 12px;
+    cursor: pointer;
+    text-align: center;
+    top: 6px;
+    border-radius: 20px;
+    height: 25px;
+    background-color: rgb(5, 147, 228);
+    position: absolute;
+    left: 80%;
+
+}
+.login-logo{
+    display: none;
+    position: absolute;
+    left: 12px;
+    border-radius: 20px;
+    background-color: #20b5ff;
+    align-items: center;
+    opacity: 0;
+    height: 30px;
+}
+.login-box h1{
+    color: white;
+}
+.login-box:hover .login-logo{
+    display: block;
+    opacity: 1;
+    animation: slideIn 0.5s ease forwards;
+}
+.login-box:hover{
+    background-color: #017fc8;
+}
+

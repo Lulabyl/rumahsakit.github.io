@@ -1,0 +1,54 @@
+.hero-img{
+    position: absolute;
+    width: 100%;    
+    filter: blur(2px);
+}
+main{
+    z-index: 1;
+}
+.container{
+    background-color: #00A9FF;
+    width: 400px;
+    height: 75px;
+    border-radius: 12px;
+    top: 30px;
+    left: 60px;
+    position: relative;
+    display: flex;
+    z-index: 2;
+    transition: height 0.5s,opacity 2s ease; 
+   
+}
+.container h1{
+    font-size: 21px;
+    margin-left: 12px;
+    stroke: black;
+    stroke-width: 12px;
+    text-align: center;
+    height: 24px;
+    color: white;
+    padding-top: 8px;
+  }
+.container p{
+  position: absolute;
+  font-size:19px;
+  padding-top: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: white;
+  opacity: 0;
+  text-align: center;
+}
+.container:hover p{
+  opacity: 1;
+  animation: slideIn 0.5s ease forwards;
+}
+.container:hover h1{
+    opacity: 0;
+  animation: slideOut 0.5s ease forwards;
+}
+.container:hover {
+  width: 1000px;
+  height: 700px;
+  border-radius: 12px;
+}
